@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Analysis Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .results-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            text-align: left;
+        }
+
+        .results-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .results-container pre {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 4px;
+            overflow: auto;
+            max-height: 400px;
+        }
+
+        .results-container a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #003366; /* Blue color */
+            text-decoration: none;
+        }
+
+        .results-container a:hover {
+            color: #002244; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="results-container">
+        <h2>Financial Analysis Results</h2>
+        <pre>{{ result | tojson(indent=4) }}</pre>
+        <a href="/">Go back to upload a new file</a>
+    </div>
+</body>
+</html>
